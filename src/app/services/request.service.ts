@@ -31,10 +31,14 @@ export class RequestService {
   }
 
   FinishBuy(buy:Buy): Observable<any>{
-      console.log(JSON.stringify(buy));
+
     return this.client.post<Buy>('https://localhost:7213/api/Buy',
     buy,     this.httpOptions);
    }
+   FindClienthistory(type: string, id:string): Observable<any[]>{
+
+  return this.client.get<Buy[]>('https://localhost:7213/api/Buy/Buyer/'+ type+ '/'+ id);
+ }
 }
 
 

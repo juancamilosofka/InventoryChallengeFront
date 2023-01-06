@@ -28,13 +28,13 @@ ngOnInit(){
 
       var jsonObject : Buy = JSON.parse(localStorage.getItem('buy')!)
       this.cart =  jsonObject;
-      this.cart.ClientName = this.ClientName;
-      this.cart.IdType = this.IdType;
-      this.cart.Id = this.IdClient;
+      this.cart.clientName = this.ClientName;
+      this.cart.idType = this.IdType;
+      this.cart.id = this.IdClient;
       var str = new Date().setSeconds(0,0);
       var dt = new Date(str).toISOString();
 
-      this.cart.Date = new Date(dt);
+      this.cart.date = new Date(dt);
 
 
     await  this.request.FinishBuy(this.cart).subscribe();

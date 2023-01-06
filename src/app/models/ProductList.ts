@@ -1,5 +1,5 @@
 export type ProductList = {
 
-    IdProduct: number,
-    Quantity: number,
+    idProduct: number,
+    quantity: number,
   }

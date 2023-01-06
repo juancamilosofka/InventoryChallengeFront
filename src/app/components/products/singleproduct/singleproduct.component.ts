@@ -22,14 +22,14 @@ export class SingleproductComponent implements OnInit {
 if(localStorage.getItem('buy') == null && this.Validate()){
     this.buy = {
 
-      Date: new Date(),
-      IdType: "CC",
-      Id: "",
-      ClientName: "",
-      ProductList: [ {
+      date: new Date(),
+      idType: "CC",
+      id: "",
+      clientName: "",
+      productList: [ {
 
-        IdProduct: IdProduct,
-        Quantity: this.quantity
+        idProduct: IdProduct,
+        quantity: this.quantity
       }
     ]
   }
@@ -41,10 +41,10 @@ if(localStorage.getItem('buy') == null && this.Validate()){
 
     const data = localStorage.getItem('buy')
     var jsonObject : Buy = JSON.parse(data!)
-    jsonObject.ProductList.push(      {
+    jsonObject.productList.push(      {
 
-      IdProduct: IdProduct,
-      Quantity: this.quantity
+      idProduct: IdProduct,
+      quantity: this.quantity
     })
     localStorage.setItem('buy', JSON.stringify(jsonObject));
     console.log(jsonObject)

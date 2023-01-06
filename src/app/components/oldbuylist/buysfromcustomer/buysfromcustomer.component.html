@@ -1,1 +1,11 @@
-<p>buysfromcustomer works!</p>
+<p>buysfromcustomer works!
+Buy Date: {{buy?.date}}
+Name: {{buy?.clientName}}
+Id type: {{buy?.idType}}
+id: {{buy?.id}}
+
+</p>
+<div class="commentscontainer" *ngIf="buy">
+  <div class="subcommentscontainer"  *ngFor="let productlist of buy.productList">
+    <app-productsfrombuy [productlist] = "productlist"></app-productsfrombuy>
+  </div>

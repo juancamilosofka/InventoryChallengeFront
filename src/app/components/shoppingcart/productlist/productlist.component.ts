@@ -15,7 +15,7 @@ export class ProductlistComponent  implements OnInit {
     ) { }
   ngOnInit(){
 
-     this.request.findProductbyId(this.productlisted?.IdProduct!).subscribe(product =>
+     this.request.findProductbyId(this.productlisted?.idProduct!).subscribe(product =>
       {
         this.product = product;
         this.productname = this.product?.name;

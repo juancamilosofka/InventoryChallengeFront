@@ -14,6 +14,7 @@ import { ProductlistComponent } from './components/shoppingcart/productlist/prod
 import { OldbuylistComponent } from './components/oldbuylist/oldbuylist.component';
 import { SingleproducttoeditComponent } from './components/addproducts/singleproducttoedit/singleproducttoedit.component';
 import { BuysfromcustomerComponent } from './components/oldbuylist/buysfromcustomer/buysfromcustomer.component';
+import { ProductsfrombuyComponent } from './components/oldbuylist/buysfromcustomer/productsfrombuy/productsfrombuy.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BuysfromcustomerComponent } from './components/oldbuylist/buysfromcusto
     ProductlistComponent,
     OldbuylistComponent,
     SingleproducttoeditComponent,
-    BuysfromcustomerComponent
+    BuysfromcustomerComponent,
+    ProductsfrombuyComponent
   ],
   imports: [
     FormsModule,

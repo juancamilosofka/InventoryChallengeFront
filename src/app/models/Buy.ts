@@ -1,9 +1,9 @@
 import { ProductList } from "./ProductList"
 export type Buy = {
 
-    Date: Date,
-    IdType: string,
-    Id: string,
-    ClientName: string,
-    ProductList: ProductList[]
+    date: Date,
+    idType: string,
+    id: string,
+    clientName: string,
+    productList: ProductList[]
   }
