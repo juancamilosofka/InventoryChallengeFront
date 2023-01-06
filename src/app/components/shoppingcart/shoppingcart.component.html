@@ -1,0 +1,20 @@
+<div>
+  <div>
+<input required name = "IdType" type="text" [(ngModel)]="IdType" placeholder ="Id Type">
+<input required name = "IdClient" type="text" [(ngModel)]="IdClient" placeholder ="Id Client">
+<input required name = "ClientName" type="text" [(ngModel)]="ClientName" placeholder ="Client Name">
+</div>
+<div>
+<button class="button" (click)="buy() ">Finish Buy</button>
+<button class="button" (click)="ClearCart() ">Clear Cart</button>
+</div>
+</div>
+<br>
+<p>Shopping list in Cart:</p>
+
+<div class="commentscontainer" *ngIf="cart?.ProductList">
+  <div class="subcommentscontainer"  *ngFor="let productlisted of cart?.ProductList">
+<app-productlist [productlisted] = "productlisted"></app-productlist>
+
+  </div>
+</div>
