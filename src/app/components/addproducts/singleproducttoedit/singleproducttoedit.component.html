@@ -1,0 +1,20 @@
+
+
+<div class="product">
+  <p class="Name">
+   {{product?.idProduct}}  - {{product?.name}}
+  </p>
+  <p>
+    In inventory: {{product?.inInventory}}
+  </p>
+  <p >
+    Min to buy: {{product?.min}}
+  </p>
+  <p>
+    Max to buy: {{product?.max}}
+  </p>
+
+  <button class="button" (click)="deleteproduct(product!.idProduct) ">Delete</button>
+  <button class="button" (click)="editproduct(product!.idProduct) ">Edit</button>
+</div>
+

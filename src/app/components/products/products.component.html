@@ -1,0 +1,14 @@
+
+<div class="commentscontainer" *ngIf="currentpage?.products">
+
+
+  <button class="button" (click)="previowspage() ">previouspage</button>
+
+    <button class="button" (click)="nextpage() ">nextpage</button>
+    </div>
+<div class="commentscontainer" *ngIf="currentpage?.products">
+  <div class="subcommentscontainer"  *ngFor="let product of currentpage?.products">
+<app-singleproduct [product] = "product"></app-singleproduct>
+
+  </div>
+</div>

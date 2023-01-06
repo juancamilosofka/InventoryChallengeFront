@@ -1,0 +1,21 @@
+<p>oldbuylist works!</p>
+
+
+<div class="product">
+  <p class="Name">
+
+  </p>
+
+
+  <input required name = "IdType" type="text" [(ngModel)]="IdType" placeholder ="Id Type">
+
+  <input required name = "IdClient" type="text" [(ngModel)]="IdClient" placeholder ="Client Id">
+  <button class="button" (click)="getclienhistory() ">Get client history</button>
+</div>
+
+<div class="commentscontainer" *ngIf="productsloaded()">
+  <div class="subcommentscontainer"  *ngFor="let buy of history">
+<app-buysfromcustomer [buy] = "buy"></app-buysfromcustomer>
+
+  </div>
+</div>
