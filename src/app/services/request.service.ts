@@ -5,6 +5,7 @@ import { PaginationProduct } from '../models/PaginationProduct';
 import { Buy } from '../models/Buy';
 import { Observable } from 'rxjs';
 import { Product } from '../models/Product';
+import { AddProduct } from '../models/AddProduct';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +40,16 @@ export class RequestService {
 
   return this.client.get<Buy[]>('https://localhost:7213/api/Buy/Buyer/'+ type+ '/'+ id);
  }
+
+    addProduct(product:AddProduct){
+      return this.client.post<Product>('https://localhost:7213/api/Product/Post',
+      product,     this.httpOptions);
+    }
+
+    editProduct(product:Product){
+      return this.client.put<Product>('https://localhost:7213/api/Product/Put',
+      product,     this.httpOptions);
+    }
 }
 
 
