@@ -12,8 +12,8 @@
 <br>
 <p>Shopping list in Cart:</p>
 
-<div class="commentscontainer" *ngIf="cart?.productList">
-  <div class="subcommentscontainer"  *ngFor="let productlisted of cart?.productList">
+<div class="buyhbox" *ngIf="cart?.productList">
+  <div class="buyhbox"  *ngFor="let productlisted of cart?.productList">
 <app-productlist [productlisted] = "productlisted"></app-productlist>
 
   </div>

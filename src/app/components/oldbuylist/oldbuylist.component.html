@@ -2,7 +2,7 @@
 
 <div class="product">
   <p class="Name">
-
+  buy History from client
   </p>
 
 
@@ -12,7 +12,7 @@
   <button class="button" (click)="getclienhistory() ">Get client history</button>
 </div>
 
-<div class="commentscontainer" *ngIf="productsloaded()">
+<div class="buyhbox" *ngIf="productsloaded()">
   <div class="subcommentscontainer"  *ngFor="let buy of history">
 <app-buysfromcustomer [buy] = "buy"></app-buysfromcustomer>
 

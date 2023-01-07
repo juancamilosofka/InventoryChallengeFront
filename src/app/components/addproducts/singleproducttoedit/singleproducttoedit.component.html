@@ -14,8 +14,8 @@
     Max to buy: {{product?.max}}
   </p>
 
-  <button class="button" (click)="deleteproduct(product!.idProduct) ">Delete</button>
-  <button class="button" (click)="editproduct(product!.idProduct) ">Edit</button>
+  <button class="deltebutton" (click)="deleteproduct(product!.idProduct) "> Delete </button>
+  <button class="sendofferbutton" (click)="editproduct(product!.idProduct) "> Edit </button>
 
   <form name="offerform" id="editproductform{{ product!.idProduct }}" class="hiddenform">
  <p>Name: </p>

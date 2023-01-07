@@ -33,3 +33,79 @@
   color: #00584b;
 
 }
+
+
+
+input {
+  margin: 8px;
+  padding: 10px;
+  padding-left: 16px;
+  padding-top: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border-color: #c0d4cb;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgb(225, 255, 227);
+}
+
+
+button:hover {
+  opacity: 75%;
+}
+.offerbutton {
+  width: 200px;
+  margin: 5px;
+  color: aliceblue;
+  border-style: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: #009102;
+  cursor: pointer;
+}
+.button {
+  width: 200px;
+  margin: 5px;
+  color: aliceblue;
+  border-style: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: #009102;
+  cursor: pointer;
+}
+.hiddenform {
+  display: none;
+}
+.offerform {
+  display: block;
+}
+
+.deltebutton{
+  width: 200px;
+  margin: 5px;
+  color: aliceblue;
+  border-style: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: #6e1d0a;
+  cursor: pointer;
+}
+
+form {
+  margin-left: 20px;
+}
+form p {
+  font-weight: 600;
+}

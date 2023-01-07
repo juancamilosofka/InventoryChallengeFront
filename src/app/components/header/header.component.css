@@ -1,6 +1,6 @@
 .nonselected {
   text-decoration: none;
-  width: 22vw;
+  width: 18vw;
   font-size: 1.1rem;
   text-align: left;
   padding-left: 20px;
@@ -28,7 +28,7 @@ color: #142721;
 
 .selected {
   text-decoration: none;
-  width: 22vw;
+
   font-size: 1.1rem;
   text-align: left;
 
@@ -49,10 +49,11 @@ color: #142721;
 
 .acontainer {
   background-color: #00584b;
+
 }
 
 .sidebarcontainer {
-  margin-top: -28px;
+
   position: absolute;
   height: 83.5vh;
 
