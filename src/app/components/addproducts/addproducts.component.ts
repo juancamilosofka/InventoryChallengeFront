@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AddProduct } from 'src/app/models/AddProduct';
 import { PaginationProduct } from 'src/app/models/PaginationProduct';
 import { RequestService } from 'src/app/services/request.service';
 
@@ -10,17 +11,27 @@ import { RequestService } from 'src/app/services/request.service';
 })
 export class AddproductsComponent  implements OnInit  {
     constructor(private request:RequestService,
-      private router:Router) { }
+      private router:Router) {
+
+      }
       currentpage?:PaginationProduct ;
       currentpagenumber?: number = 1;
       totalpages?: number;
 
+      newproduct:  AddProduct = {
+        name: "",
+        inInventory: 0,
+        enabled: true ,
+        min: 0,
+        max: 0
+      };
       quantity: number = 1;
 
-      inInventory: number = 1;
-      mintobuy: number = 1;
-      maxtoBuy: number = 1;
-
+      inInventory?: number;
+      mintobuy?: number;
+      maxtoBuy?: number;
+      name?: string;
+      enabled?: boolean;
       ngOnInit(): void {
           this.currentpagenumber = 1;
           this.totalpages =1;
@@ -49,6 +60,7 @@ export class AddproductsComponent  implements OnInit  {
         }
         return false
       }
+
       isthislastpage(page: Number):boolean{
 
         this.currentpagenumber = this.currentpagenumber ?? 1;
@@ -59,6 +71,7 @@ export class AddproductsComponent  implements OnInit  {
         return true
 
       }
+
       previowspage(){
         if(this.currentpagenumber! > 1 ){
         this.currentpagenumber = this.currentpagenumber! - 1;
@@ -77,5 +90,21 @@ export class AddproductsComponent  implements OnInit  {
 
       }
 
+      Addproduct(){
+        console.log(this.inInventory);
+
+        this.newproduct.inInventory = this.inInventory!;
+        this.newproduct.min = this.mintobuy!;
+        this.newproduct.max = this.maxtoBuy!;
+        this.newproduct.name = this.name!;
+        this.newproduct.enabled = true;
+        console.log(this.newproduct);
+        this.request.addProduct(this.newproduct).subscribe(product => {
+          window.location.reload()})
+
   }
+
+
+
+}
 

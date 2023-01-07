@@ -1,5 +1,15 @@
 
-<input required name = "newAuthor" type="text" [(ngModel)]="quantity" placeholder ="Author">
+<input required name = "name" type="text" [(ngModel)]="name" placeholder ="name">
+
+<input required name = "inInventory" type="text" [(ngModel)]="inInventory" placeholder ="inInventory">
+
+<input required name = "min" type="text" [(ngModel)]="mintobuy" placeholder ="min">
+
+<input required name = "max" type="text" [(ngModel)]="maxtoBuy" placeholder ="max">
+
+
+
+<button class="button" (click)="Addproduct() ">Add Product</button>
 
 <div class="commentscontainer" *ngIf="currentpage?.products">
 

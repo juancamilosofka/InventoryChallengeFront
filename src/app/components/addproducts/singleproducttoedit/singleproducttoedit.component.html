@@ -16,5 +16,24 @@
 
   <button class="button" (click)="deleteproduct(product!.idProduct) ">Delete</button>
   <button class="button" (click)="editproduct(product!.idProduct) ">Edit</button>
+
+  <form name="offerform" id="editproductform{{ product!.idProduct }}" class="hiddenform">
+ <p>Name: </p>
+    <input required name = "name" type="text" [(ngModel)]="name" placeholder ="name">
+    <p>InInventory: </p>
+    <input required name = "inInventory" type="text" [(ngModel)]="inInventory" placeholder ="inInventory">
+    <p>Min: </p>
+    <input required name = "min" type="text" [(ngModel)]="mintobuy" placeholder ="min">
+    <p>Max: </p>
+    <input required name = "max" type="text" [(ngModel)]="maxtoBuy" placeholder ="max">
+    <p>Enabled: </p>
+    <input required name = "enabled" type="text" [(ngModel)]="enabled" placeholder ="enabled">
+     <div>
+
+    </div>
+    <button class="sendofferbutton" (click)="SaveProduct()">
+      Save Edit
+    </button>
+  </form>
 </div>
 
